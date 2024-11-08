@@ -4,7 +4,7 @@
 
     <test name="run on chromer">
         <classes>
-            <class name="com.nopcommece.users.Level_01_Repeat_Youself" />
+            <class name="com.nopcommece.users.Level_03_Page_Object" />
         </classes>
     </test>
 
