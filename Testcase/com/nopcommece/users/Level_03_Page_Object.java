@@ -15,29 +15,19 @@ import pageObjects.RegisterPageObject;
 public class Level_03_Page_Object extends BaseTest {
 
     private WebDriver driver;
-    // hàm khởi taọ (constrctor function)
-    //1.  cùng tên với claass
-    //2. không có kiểu trả về
-    //3. chạy đầu tiên khi class này đc gọi
-    //4. có tham số hoạc k
     private HomePageObject homePage;
     private LoginPageObject loginPage;
     private RegisterPageObject registerPage;
 
-
-    public Level_03_Page_Object(WebDriver driver) {
-        this.driver = driver;
-    }
-
     private String first_name = "hi";
     private String middle_name = "si";
-    private String last_name =" it";
+    private String last_name = "it";
     private String email = "lequoc@gmail.com";
     private String password = "Aa123465";
-    private String conirirm_password = "Aa123465";
+    private String confirm_password = "Aa123465";
 
     @BeforeClass
-    public void beforClass(){
+    public void beforeClass(){
         driver = new ChromeDriver();
         driver.get("https://live.techpanda.org/");
 
@@ -47,7 +37,7 @@ public class Level_03_Page_Object extends BaseTest {
     }
 
     @Test
-    public void User_Register(String first_name, String middle_name, String last_name, String email, String password, String conirirm_password){
+    public void Tc_01_User_Register(){
         homePage.clickToRegisterLink();
 
         registerPage.sendKeyToFirstName(first_name);
@@ -55,25 +45,26 @@ public class Level_03_Page_Object extends BaseTest {
         registerPage.sendKeyToLastName(last_name);
         registerPage.sendKeyToEmailAddress(email);
         registerPage.sendKeyToPassword(password);
-        registerPage.sendKeyToConfirmPassword(conirirm_password);
+        registerPage.sendKeyToConfirmPassword(confirm_password);
         registerPage.clickToRegisterButton();
-//        Assert.assertEquals("","");
+
+        // Uncomment this if there's an assertion to verify registration success
+        // Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed");
     }
 
     @Test
-    public void User_Login(){
-        //từ register page qua homepage
-        //
+    public void Tc_02_User_Login(){
         loginPage.enterEmailTextBox(email);
         loginPage.enterPasswordTextBox(password);
         loginPage.clickToLoginButton();
-        //Assert.assertTrue();
+
+        // Uncomment this if there's an assertion to verify login success
+        // Assert.assertTrue(homePage.isMyAccountLinkDisplayed(), "My Account link is not displayed");
     }
 
     @Test
     public void User_My_account(){
-        // từ login qua màn hình my account
-
+        // Implement this test case as per your requirements.
     }
 
     @AfterClass

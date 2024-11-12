@@ -16,7 +16,7 @@ public class RegisterPageObject extends BasePage {
 
     public void sendKeyToFirstName(String s) {
         waitForElementInVisible(driver,RegisterPageUI.FIRST_NAME_TEXTBOX);
-        sendKeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX,"1243");
+        sendKeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX,s);
     }
 
     public void sendKeyToMiddleName(String s) {
