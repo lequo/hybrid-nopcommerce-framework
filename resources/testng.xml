@@ -2,9 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Nopcomerce">
 
-    <test name="run on chromer">
+    <test name="run on gg">
+<!--        <parameter name="browser" value="edge"></parameter>-->
         <classes>
-            <class name="com.nopcommece.users.Level_03_Page_Object" />
+            <class name="com.vth.users.VTH" />
         </classes>
     </test>
 

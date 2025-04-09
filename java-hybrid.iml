@@ -6,11 +6,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Testcase" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/actions" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/interfaces" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/javaSDET" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="selenium-server-4.25.0" level="project" />
+    <orderEntry type="library" name="libaries" level="project" />
   </component>
 </module>
